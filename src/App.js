@@ -15,7 +15,7 @@ const App = () => {
       <Navbar />
       <div className="min-h-screen bg-gray-100 p-5">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
           <Route path="/login" element={<Login />} />
           <Route path="/add" element={<ProtectedRoute><AddExpense /></ProtectedRoute>} />
           <Route path="/expenses" element={<ProtectedRoute><ExpenseList /></ProtectedRoute>} />
