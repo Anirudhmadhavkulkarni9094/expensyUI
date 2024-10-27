@@ -21,7 +21,7 @@ const Login = () => {
     if (isRegistering) {
       // Registration Logic
       try {
-        const response = await api.post('https://expensy-rr68.onrender.com/api/auth/register', formData);
+        await api.post('https://expensy-rr68.onrender.com/api/auth/register', formData);
         setSuccess('User registered successfully');
         setFormData({ username: '', email: '', password: '' });
         setTimeout(() => setIsRegistering(false), 2000); // Switch to login view after success
